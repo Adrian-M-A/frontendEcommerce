@@ -31,13 +31,11 @@ form {
 
 #windowRegister {
     background-color: white;
-    /* opacity: 0.9; */
     display: flex;
     justify-items: center;
     align-self: center;
     flex-direction: column;
     box-shadow: 0.2rem 0.2rem 1rem black ;
-    border: 1px solid grey;
     border-radius: 1rem;
     width: 30rem;
     height: 30rem;
@@ -75,7 +73,7 @@ h3{
 }
 
 button{
-    background-color: #f3ebc6;
+    background-color: #917aa4;
     border: 0.2rem solid #96c9cd;
     border-radius: 0.5rem;
     height: 3rem;
@@ -83,11 +81,10 @@ button{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
     font-size: large;
-    color: #917aa4;
+    color: #f3ebc6;
     margin-top: 2rem;
 }
 
 button:hover{
-    background-color: #917aa4;
-    color: #f3ebc6;
+    color: #96c9cd;
 }
