@@ -31,16 +31,14 @@ form {
 
 #windowRegister {
     background-color: white;
-    /* opacity: 0.9; */
     display: flex;
     justify-items: center;
     align-self: center;
     flex-direction: column;
     box-shadow: 0.2rem 0.2rem 1rem black ;
-    border: 1px solid grey;
     border-radius: 1rem;
     width: 30rem;
-    height: 30rem;
+    height: 35rem;
 }
 
 form{
@@ -75,19 +73,30 @@ h3{
 }
 
 button{
-    background-color: #f3ebc6;
-    border: 0.2rem solid #96c9cd;
+    background-color: #917aa4;
+    border: 0.2rem solid #917aa4;
     border-radius: 0.5rem;
     height: 3rem;
     padding: 0.5rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
     font-size: large;
-    color: #917aa4;
+    color: #f3ebc6;
     margin-top: 2rem;
 }
 
 button:hover{
-    background-color: #917aa4;
-    color: #f3ebc6;
+    background-color: #9c83b1;
+    border: 0.2rem solid #9c83b1;
+    color: white;
+}
+
+#registerButton{
+    border: 0.2rem solid #96c9cd;
+    background-color: #96c9cd;
+    color: #917aa4;
+}
+
+#registerButton:hover{
+    color: white;
 }
