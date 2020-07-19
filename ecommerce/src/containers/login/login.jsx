@@ -43,7 +43,7 @@ class Login extends React.Component {
     //     }
     // });
 
-    register(){
+    register = () => {
         setTimeout(() => {
             this.props.history.push('/register');
         }, 300);
@@ -51,19 +51,21 @@ class Login extends React.Component {
 
     render() {
         return(
-            <div id="registerContainer">
-                <div id="windowRegister">
-                    <div id="logo">
-                        <div id="logoImage"></div>
-                    </div>
-                    <h3>Entra para conocer nuestras variedades</h3>
-                    <div id="formInputs">
-                        <form onSubmit={this.handleSubmit}>
-                            <input type="email" name="email" id="emailInput" value={this.state.email} onChange={this.handleChange} placeholder="Introduce tu email"/>
-                            <input type="password" name="password" id="passwordInput" value={this.state.password} onChange={this.handleChange} placeholder="Introduce tu contraseña" />
-                            <button type="submit">Entrar</button>
-                            <button id="registerButton" onClick={this.register}>Aún no estoy registrado</button>
-                        </form>
+            <div id="loginContainer">
+                <div id="loginWindow">
+                    <div id="windowContent">
+                        <div id="loginwindowHeader">
+                            <div id="loginLogoImage"></div>
+                        </div>
+                        <h2 id="loginH2">Entra para conocer nuestras variedades</h2>
+                        <div id="loginFormInputs">
+                            <form id="loginForm" onSubmit={this.handleSubmit}>
+                                <input type="email" name="email" id="loginEmailInput" value={this.state.email} onChange={this.handleChange} placeholder="Introduce tu email"/>
+                                <input type="password" name="password" id="loginPasswordInput" value={this.state.password} onChange={this.handleChange} placeholder="Introduce tu contraseña" />
+                                <button id="loginButton" type="submit">Entrar</button>
+                                <button id="registerButton" onClick={this.register}>Aún no estoy registrado</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -1,13 +1,20 @@
 import React from "react";
 import axios from "axios";
+import "./register.css";
 
 class Register extends React.Component {
     constructor(props){
         super(props);
 
         this.state = {
+            name: "",
+            surnames: "",
+            address: "",
+            phone: "",
+            document: "",
             email: "",
             password: "",
+            password2: "",
             registered: false
         }
     };
@@ -19,17 +26,22 @@ class Register extends React.Component {
     handleSubmit = event =>{
         event.preventDefault();
         let body = {
+            name: this.state.name,
+            surnames: this.state.surnames,
+            address: this.state.adress,
+            phone: this.state.phone,
+            document: this.state.document,
             email: this.state.email,
             password: this.state.password
         };
 
-        axios.post("http://localhost:3001/users/login", body)
+        axios.post("http://localhost:3001/users/register", body)
         .then(res => {
             console.log(res.data)
-            localStorage.setItem('authToken', res.data.token);
-            localStorage.setItem('user', JSON.stringify(res.data.user));
+            // localStorage.setItem('authToken', res.data.token);
+            // localStorage.setItem('user', JSON.stringify(res.data.user));
             setTimeout(() => {
-                this.props.history.push('/');
+                this.props.history.push('/login');
             }, 500);
         })
         .catch(error => console.error(error))
@@ -41,7 +53,7 @@ class Register extends React.Component {
     //     }
     // });
 
-    register(){
+    register = () =>{
         setTimeout(() => {
             this.props.history.push('/register');
         }, 300);
@@ -50,8 +62,32 @@ class Register extends React.Component {
     render() {
         return(
             <div id="registerContainer">
-                <div id="windowRegister">
-                        
+                <div id="registerWindow">
+                    <div id="windowContent">
+                        <div id="registerHeader">
+                            <div id="registerLogoImage">
+                            </div>
+                        </div> 
+                        <h2 id="registerH2">Rellena tus datos para poder acceder a nuestra mejor oferta</h2>
+                        <div id="registerFormInputs">
+                            <form id="registerForm" onSubmit={this.handleSubmit}>
+                                <div id="registerFormLeft">
+                                    <input type="text" name="name" id="nameinput" value={this.state.name} onChange={this.handleChange} placeholder="Nombre"/>
+                                    <input type="text" name="surnames" id="surnamesinput" value={this.state.surnames} onChange={this.handleChange} placeholder="Apellidos" />
+                                    <input type="text" name="address" id="addressinput" value={this.state.address} onChange={this.handleChange} placeholder="Dirección de envío" />
+                                    <input type="text" name="phone" id="phoneinput" value={this.state.phone} onChange={this.handleChange} placeholder="Teléfono" />
+                                    <input type="text" name="document" id="documentinput" value={this.state.document} onChange={this.handleChange} placeholder="DNI/CIF" />
+                                </div>
+                                <div id="registerFormRight">
+                                    <input type="email" name="email" id="emailInput" value={this.state.email} onChange={this.handleChange} placeholder="Introduce tu email"/>
+                                    <input type="password" name="password" id="password1Input" value={this.state.password} onChange={this.handleChange} placeholder="Introduce tu contraseña" />
+                                    <input type="password" name="password2" id="password2Input" value={this.state.password2} onChange={this.handleChange} placeholder="Repite tu contraseña" />
+
+                                    <button type="submit">Registrarme</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         )
