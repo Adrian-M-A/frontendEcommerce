@@ -1,8 +1,7 @@
 import React from "react";
 import axios from "axios";
-import "./login.css";
 
-class Login extends React.Component {
+class Register extends React.Component {
     constructor(props){
         super(props);
 
@@ -29,7 +28,6 @@ class Login extends React.Component {
             console.log(res.data)
             localStorage.setItem('authToken', res.data.token);
             localStorage.setItem('user', JSON.stringify(res.data.user));
-            this.registered = true;
             setTimeout(() => {
                 this.props.history.push('/');
             }, 500);
@@ -53,22 +51,11 @@ class Login extends React.Component {
         return(
             <div id="registerContainer">
                 <div id="windowRegister">
-                    <div id="logo">
-                        <div id="logoImage"></div>
-                    </div>
-                    <h3>Entra para conocer nuestras variedades</h3>
-                    <div id="formInputs">
-                        <form onSubmit={this.handleSubmit}>
-                            <input type="email" name="email" id="emailInput" value={this.state.email} onChange={this.handleChange} placeholder="Introduce tu email"/>
-                            <input type="password" name="password" id="passwordInput" value={this.state.password} onChange={this.handleChange} placeholder="Introduce tu contraseña" />
-                            <button type="submit">Entrar</button>
-                            <button id="registerButton" onClick={this.register}>Aún no estoy registrado</button>
-                        </form>
-                    </div>
+                        
                 </div>
             </div>
         )
     }
 };
 
-export default Login;
+export default Register;
