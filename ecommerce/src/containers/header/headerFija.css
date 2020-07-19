@@ -1,11 +1,12 @@
 #header{
-    background-color: #96c9cd;
     display: flex;
+    background-color: #96c9cd;
     width: 100vw;
     height: 4.5em;
     margin-top: 1.5em;
-    opacity: 90%;
+    opacity: 70%;
 }
+
 
 #menu {
 
@@ -24,7 +25,7 @@ margin-top: -2.8em;
     display: flex;
     position: absolute;
     margin-top: -2.2em;
-    margin-left: 42em;
+    margin-left: 55em;
     font-family: Audrey, monospace;
     font-size: 20px;
     color: #917aa4;
@@ -41,7 +42,7 @@ margin-top: -2.8em;
     display: flex;
     position: absolute;
     margin-top: -2.2em;
-    margin-left: 49em;
+    margin-left: 60em;
     font-family: Audrey, monospace;
     font-size: 20px;
     color: #917aa4;
@@ -60,5 +61,5 @@ margin-top: -2.8em;
     width: 100px;
     height: 90px;
     margin-top: -4em;
-    margin-left: 65em;
+    margin-left: 79em;
 }

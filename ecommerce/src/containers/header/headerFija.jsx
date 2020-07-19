@@ -13,12 +13,11 @@ class headerFija extends React.Component {
                     <button class="menubuttons" id="cartbutton">Cesta</button>
                     <div id="logocart"></div>
                 </nav>
-
-
+                
 
             </div>
 
-        );
+         );
     }
 
 

@@ -6,7 +6,7 @@ class slider extends React.Component {
 
         return (
 
-            <div id="containerSlider"></div>
+            <div id="containerslider"></div>
 
         );
     }
