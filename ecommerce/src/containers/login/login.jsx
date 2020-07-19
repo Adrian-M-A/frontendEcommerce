@@ -11,9 +11,6 @@ class Login extends React.Component {
             password: "",
             registered: false
         }
-            // Se enlaza, bind, la función al estado
-        // this.login = this.login.bind(this);
-
     };
 
     handleChange = (ev) =>{
@@ -26,11 +23,15 @@ class Login extends React.Component {
             email: this.state.email,
             password: this.state.password
         };
-        console.log(body)
 
         axios.post("http://localhost:3001/users/login", body)
         .then(res => {
             console.log(res.data)
+            localStorage.setItem('authToken', res.data.token);
+            localStorage.setItem('user', JSON.stringify(res.data.user));
+            setTimeout(() => {
+                this.history.push('/');
+            }, 500);
         })
         .catch(error => console.error(error))
     }
@@ -54,6 +55,7 @@ class Login extends React.Component {
                             <input type="email" name="email" id="emailInput" value={this.state.email} onChange={this.handleChange} placeholder="Introduce tu email"/>
                             <input type="password" name="password" id="passwordInput" value={this.state.password} onChange={this.handleChange} placeholder="Introduce tu contraseña" />
                             <button type="submit">Log in</button>
+                            <button id="registerButton">Aún no estoy registrado</button>
                         </form>
                     </div>
                 </div>
