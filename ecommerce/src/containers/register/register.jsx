@@ -15,6 +15,7 @@ class Register extends React.Component {
             email: "",
             password: "",
             password2: "",
+            errorMessage: "",
             registered: false
         }
     };
@@ -25,10 +26,23 @@ class Register extends React.Component {
 
     handleSubmit = event =>{
         event.preventDefault();
+
+        //  //1 control de errores
+        
+        //  if(this.state.password !== this.state.password2){
+        //     this.setState({msgError: "Los dos passwords deben coincidir"});
+        //     return;
+        // }
+        
+        // if(this.state.username === ""){
+            
+        //     return;
+        // }
+
         let body = {
             name: this.state.name,
             surnames: this.state.surnames,
-            address: this.state.adress,
+            address: this.state.address,
             phone: this.state.phone,
             document: this.state.document,
             email: this.state.email,
@@ -37,9 +51,7 @@ class Register extends React.Component {
 
         axios.post("http://localhost:3001/users/register", body)
         .then(res => {
-            console.log(res.data)
-            // localStorage.setItem('authToken', res.data.token);
-            // localStorage.setItem('user', JSON.stringify(res.data.user));
+            console.log(res.data);
             setTimeout(() => {
                 this.props.history.push('/login');
             }, 500);
@@ -81,9 +93,9 @@ class Register extends React.Component {
                                 <div id="registerFormRight">
                                     <input type="email" name="email" id="emailInput" value={this.state.email} onChange={this.handleChange} placeholder="Introduce tu email"/>
                                     <input type="password" name="password" id="password1Input" value={this.state.password} onChange={this.handleChange} placeholder="Introduce tu contraseña" />
+                                    <span>{this.state.errorMessage}</span>
                                     <input type="password" name="password2" id="password2Input" value={this.state.password2} onChange={this.handleChange} placeholder="Repite tu contraseña" />
-
-                                    <button type="submit">Registrarme</button>
+                                    <button type="submit">Registrar</button>
                                 </div>
                             </form>
                         </div>
