@@ -15,7 +15,8 @@ class Register extends React.Component {
             email: "",
             password: "",
             password2: "",
-            errorMessage: "",
+            errorPassword: "",
+            errorName:"",
             registered: false
         }
     };
@@ -26,19 +27,22 @@ class Register extends React.Component {
 
     handleSubmit = event =>{
         event.preventDefault();
-
-        //  //1 control de errores
-        
-        //  if(this.state.password !== this.state.password2){
-        //     this.setState({msgError: "Los dos passwords deben coincidir"});
-        //     return;
-        // }
+         
+        //1 control de errores
+         if(this.state.password !== this.state.password2){
+            this.setState({errorPassword: "Los dos passwords deben coincidir."});
+            return;
+        }
+        if(this.state.name.length > 20){
+            this.setState({errorName: "Introduzca un nombre válido."});
+            return;
+        }
         
         // if(this.state.username === ""){
             
         //     return;
         // }
-
+        
         let body = {
             name: this.state.name,
             surnames: this.state.surnames,
@@ -85,6 +89,7 @@ class Register extends React.Component {
                             <form id="registerForm" onSubmit={this.handleSubmit}>
                                 <div id="registerFormLeft">
                                     <input type="text" name="name" id="nameinput" value={this.state.name} onChange={this.handleChange} placeholder="Nombre"/>
+                                    <span id="errorName">{this.state.errorName}</span>
                                     <input type="text" name="surnames" id="surnamesinput" value={this.state.surnames} onChange={this.handleChange} placeholder="Apellidos" />
                                     <input type="text" name="address" id="addressinput" value={this.state.address} onChange={this.handleChange} placeholder="Dirección de envío" />
                                     <input type="text" name="phone" id="phoneinput" value={this.state.phone} onChange={this.handleChange} placeholder="Teléfono" />
@@ -93,7 +98,7 @@ class Register extends React.Component {
                                 <div id="registerFormRight">
                                     <input type="email" name="email" id="emailInput" value={this.state.email} onChange={this.handleChange} placeholder="Introduce tu email"/>
                                     <input type="password" name="password" id="password1Input" value={this.state.password} onChange={this.handleChange} placeholder="Introduce tu contraseña" />
-                                    <span>{this.state.errorMessage}</span>
+                                    <span id="errorPassword">{this.state.errorPassword}</span>
                                     <input type="password" name="password2" id="password2Input" value={this.state.password2} onChange={this.handleChange} placeholder="Repite tu contraseña" />
                                     <button type="submit">Registrar</button>
                                 </div>
