@@ -122,7 +122,12 @@ button:hover{
     color: white;
 }
 
-#errorMessage, #errorName{
+#errorPassword, #errorPasswords, #errorName, #errorSurnames, #errorDocument, #errorRegister,
+#errorAddress, #errorPhone, #errorEmail {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color:red;
+}
+
+#errorRegister{
+    padding-top: 1rem;
 }

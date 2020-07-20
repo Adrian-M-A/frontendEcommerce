@@ -9,6 +9,7 @@ class Login extends React.Component {
         this.state = {
             email: "",
             password: "",
+            errorLogin:"",
             registered: false
         }
     };
@@ -34,7 +35,9 @@ class Login extends React.Component {
                 this.props.history.push('/');
             }, 500);
         })
-        .catch(error => console.error(error))
+        .catch(error => {
+            this.setState({errorLogin: "No se encuentra registrado."});
+        })
     };
 
     // this.props.history.block((location, action) => {
@@ -62,6 +65,7 @@ class Login extends React.Component {
                             <form id="loginForm" onSubmit={this.handleSubmit}>
                                 <input type="email" name="email" id="loginEmailInput" value={this.state.email} onChange={this.handleChange} placeholder="Introduce tu email"/>
                                 <input type="password" name="password" id="loginPasswordInput" value={this.state.password} onChange={this.handleChange} placeholder="Introduce tu contraseña" />
+                                <span id="errorLogin">{this.state.errorLogin}</span>
                                 <button id="loginButton" type="submit">Entrar</button>
                                 <button id="registerButton" onClick={this.register}>Aún no estoy registrado</button>
                             </form>
