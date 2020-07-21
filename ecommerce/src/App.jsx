@@ -18,8 +18,12 @@ import Subheader from "./containers/Subheader/subheader.jsx";
 function App() {
   return (
     <div className="App">
-      <HeaderFija />
+
       <Router>
+
+      <HeaderFija />
+
+
         <Switch>
           <Route path="/login" exact component={Login} />
           <Route path="/register" exact component={Register} />
@@ -28,6 +32,7 @@ function App() {
           <Route component={Error} />  {/*Esta ruta siempre al final, es la del 404*/}
         </Switch>
       </Router>
+
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import "./headerFija.css";
+import { NavLink } from "react-router-dom";
 
 class headerFija extends React.Component {
 
@@ -12,7 +13,7 @@ class headerFija extends React.Component {
             <div id="header">
                 <nav id="menu">
                     <div id="logoheader"></div>
-                    <button  class="menubuttons" id="orderbutton">Pedido</button>
+                    <NavLink to="/menu"  class="menubuttons" id="orderbutton">Pedido</NavLink>
                     <button class="menubuttons" id="cartbutton">Cesta</button>
                     <div id="logocart"></div>
                 </nav>
