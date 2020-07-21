@@ -1,5 +1,6 @@
 import React from "react";
 import "./error.css";
+import { NavLink } from "react-router-dom";
 
 
 class slider extends React.Component {
@@ -8,7 +9,7 @@ class slider extends React.Component {
         return (
 
             <div id="errorContainer">
-                <button id="errorbutton">Vuelve al inicio</button>
+                <NavLink to="/" id="errorbutton">Vuelve al inicio</NavLink>
             </div>
 
         );
