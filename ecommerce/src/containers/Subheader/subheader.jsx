@@ -1,5 +1,6 @@
 import React from "react";
 import "./subheader.css";
+import { NavLink } from "react-router-dom";
 
 
 class subheader extends React.Component {
@@ -8,11 +9,11 @@ class subheader extends React.Component {
         return (
             <div id="subheader">
                 <nav id="submenu">
-                    <button class="menubuttons" id="sushibutton-submenu">Sushi</button>
-                    <button class="menubuttons" id="entrantesbutton-submenu">Entrantes</button>
-                    <button class="menubuttons" id="antisushibutton-submenu">Anti Sushi</button>
-                    <button class="menubuttons" id="dulcebutton-submenu">Dulce</button>
-                    <button class="menubuttons" id="bebidabutton-submenu">Bebida</button>
+                    <NavLink to="sushi" class="menubuttons" id="sushibutton-submenu">Sushi</NavLink>
+                    <NavLink to="entrantes" class="menubuttons" id="entrantesbutton-submenu">Entrantes</NavLink>
+                    <NavLink to="antisushi" class="menubuttons" id="antisushibutton-submenu">Anti Sushi</NavLink>
+                    <NavLink to="dulces" class="menubuttons" id="dulcebutton-submenu">Dulces</NavLink>
+                    <NavLink to="bebidas" class="menubuttons" id="bebidabutton-submenu">Bebidas</NavLink>
                 </nav>
 
 
