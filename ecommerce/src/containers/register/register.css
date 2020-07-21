@@ -1,38 +1,39 @@
-#loginContainer{
+#registerContainer{
     background-image: url("../../img/Back3.jpg");
     background-color: #e2ddfa;
-    display:    flex;
+    display: flex;
     justify-content: center;
     height: 55rem;
 }
 
-#loginWindow {
+#registerWindow {
     background-color: white;
     display: flex;
-    justify-items: center;
     align-self: center;
+    justify-content: center;
     flex-direction: column;
     box-shadow: 0.2rem 0.2rem 1rem black ;
     border-radius: 1rem;
-    width: 35rem;
-    height: 35rem;
+    width: 50rem;
+    height: 38rem;
 }
 
 #windowContent{
     display: flex;
     flex-direction: column;
+    height: 38rem;
 }
 
-#loginwindowHeader{
+#registerHeader{
     display: flex;
     justify-content: center;
+    width: 50rem;
     height: 8rem;
-    width: 35rem;
     border-radius: 1rem 1rem 0rem 0rem;
     background-color: #96c9cd;
 }
 
-#loginLogoImage{
+#registerLogoImage{
     display: flex;
     align-self: center;
     background-image: url("../../img/sushiya.png");   
@@ -40,24 +41,38 @@
     width: 20rem;
 }
 
-#loginH2{
-    color: #917aa4;
-    padding: 1rem;
-}
-
-#loginForm {
+#registerFormInputs{
     display: flex;
-    flex-direction: column;    
-    width: 20rem;
+    justify-content: flex-start;
+    width: 50rem;
 }
 
-#loginFormInputs{
+#registerForm {
+    display: flex;
+    flex-direction: row;    
+    width: 50rem;
+}
+
+#registerFormLeft {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    width: 25rem;
+    padding: 2rem;
+}
+#registerFormRight {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    padding: 2rem;
+    width: 25rem;
 }
 
-#loginEmailInput, #loginPasswordInput{
-    margin-left: 10rem;
+#nameinput, #surnamesinput, #addressinput, #phoneinput, #documentinput,
+#emailInput, #password1Input, #password2Input{
+    display: flex;
     margin: 1rem;
     padding: 0.5rem;
     border: 0.1rem solid #96c9cd;
@@ -72,12 +87,13 @@
     font-weight: bolder;
 }
 
-#errorLogin{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color:red;
+#registerH2{
+    color: #917aa4;
+    margin-top: 2rem;
+    margin-bottom: 0rem;
 }
 
-#loginButton{
+button{
     background-color: #917aa4;
     border: 0.2rem solid #917aa4;
     border-radius: 0.5rem;
@@ -88,10 +104,9 @@
     font-size: large;
     color: #f3ebc6;
     margin-top: 2rem;
-    margin-bottom: 0rem;
 }
 
-#loginButton:hover{
+button:hover{
     background-color: #9c83b1;
     border: 0.2rem solid #9c83b1;
     color: white;
@@ -101,9 +116,18 @@
     border: 0.2rem solid #96c9cd;
     background-color: #96c9cd;
     color: #917aa4;
-    margin-top: 1.5rem;
 }
 
 #registerButton:hover{
     color: white;
+}
+
+#errorPassword, #errorPasswords, #errorName, #errorSurnames, #errorDocument, #errorRegister,
+#errorAddress, #errorPhone, #errorEmail {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:red;
+}
+
+#errorRegister{
+    padding-top: 1rem;
 }
