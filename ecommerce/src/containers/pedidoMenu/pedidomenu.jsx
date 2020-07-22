@@ -1,13 +1,13 @@
 import React from "react";
-import "./antisushimenu.css";
+import "./pedidomenu.css";
 import Subheader from "../Subheader/subheader.jsx";
 
 
-class antisushimenu extends React.Component {
+class pedidomenu extends React.Component {
 
     render() {
         return (
-            <div id="antisushicontainer">
+            <div id="pedidomenucontainer">
                 <Subheader />
 
             </div>
@@ -20,4 +20,4 @@ class antisushimenu extends React.Component {
 }
 
 
-export default antisushimenu;
+export default pedidomenu;

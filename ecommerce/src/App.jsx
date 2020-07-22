@@ -15,6 +15,7 @@ import Entrantesmenu from "./containers/submenuCOMP/entrantesmenu.jsx";
 import Antisushimenu from "./containers/submenuCOMP/antisushimenu.jsx";
 import Dulcemenu from "./containers/submenuCOMP/dulcemenu.jsx";
 import Bebidasmenu from "./containers/submenuCOMP/bebidasmenu.jsx";
+import Pedidomenu from "./containers/pedidoMenu/pedidomenu.jsx";
 
 
 
@@ -36,7 +37,7 @@ function App() {
           <Route path="/login" exact component={Login} />
           <Route path="/register" exact component={Register} />
           <Route path="/" exact component={Slider} />
-          <Route path="/menu" exact component={Subheader} />
+          <Route path="/menu" exact component={Pedidomenu} />
           <Route path="/sushi" exact component={Sushimenu} />
           <Route path="/entrantes" exact component={Entrantesmenu} />
           <Route path="/antisushi" exact component={Antisushimenu} />
