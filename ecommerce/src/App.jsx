@@ -1,7 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
-import Login from "./containers/login/login.jsx";
-import Register from "./containers/register/register.jsx"; 
+import Login from "./containers/Login/Login.jsx";
+import Register from "./containers/Register/Register.jsx";
+import Product from "./containers/Products/Product.jsx";
+import GlutenFree from "./containers/glutenFree/glutenFree.jsx";
+import Vegan from "./containers/Vegan/Vegan.jsx"; 
 
 import './App.css';
 
@@ -16,12 +19,7 @@ import Antisushimenu from "./containers/submenuCOMP/antisushimenu.jsx";
 import Dulcemenu from "./containers/submenuCOMP/dulcemenu.jsx";
 import Bebidasmenu from "./containers/submenuCOMP/bebidasmenu.jsx";
 
-
-
-
-
 //Usamos "className" porque solo "class" da lugar a confusión en jsx
-
 
 function App() {
   return (
@@ -35,6 +33,9 @@ function App() {
         <Switch>
           <Route path="/login" exact component={Login} />
           <Route path="/register" exact component={Register} />
+          <Route path="/products" exact component={Product} />
+          <Route path="/vegetarian" exact component={Vegan} />
+          <Route path="/glutenFree" exact component={GlutenFree} />
           <Route path="/" exact component={Slider} />
           <Route path="/menu" exact component={Subheader} />
           <Route path="/sushi" exact component={Sushimenu} />
