@@ -4,7 +4,8 @@ import Login from "./containers/Login/Login.jsx";
 import Register from "./containers/Register/Register.jsx";
 import Product from "./containers/Products/Product.jsx";
 import GlutenFree from "./containers/glutenFree/glutenFree.jsx";
-import Vegan from "./containers/Vegan/Vegan.jsx"; 
+import Vegan from "./containers/Vegan/Vegan.jsx";
+import ProductDetail from "./containers/ProductDetail/ProductDetail.jsx";
 
 import './App.css';
 
@@ -28,14 +29,13 @@ function App() {
       <Router>
 
       <HeaderFija />
-
-
         <Switch>
           <Route path="/login" exact component={Login} />
           <Route path="/register" exact component={Register} />
           <Route path="/products" exact component={Product} />
           <Route path="/vegetarian" exact component={Vegan} />
           <Route path="/glutenFree" exact component={GlutenFree} />
+          <Route path="/detail" exact component={ProductDetail} />
           <Route path="/" exact component={Slider} />
           <Route path="/menu" exact component={Subheader} />
           <Route path="/sushi" exact component={Sushimenu} />

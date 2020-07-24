@@ -8,7 +8,7 @@ const initialState = {
     cart:[]
 }
 
-function reducer(state= initialState, action){
+function reducer(state = initialState, action){
     switch(action.type){
         case "LOGIN":
             return {

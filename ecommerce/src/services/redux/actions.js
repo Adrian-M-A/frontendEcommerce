@@ -45,9 +45,9 @@ export const VeganProducts = async() =>{
 }
 
 export const addProductToCart = (product) =>{
-    const cart = store.getState().products.cart;
+    const cart = store.getState().cart;
     store.dispatch({
         type:ADD_PRODUCT_TO_CART,
-        payload: [...cart,product]
+        payload: [...cart, product]
     })
 }
