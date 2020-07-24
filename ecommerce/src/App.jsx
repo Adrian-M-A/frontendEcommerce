@@ -32,12 +32,12 @@ function App() {
 
       <HeaderFija />
 
-
         <Switch>
           <Route path="/login" exact component={Login} />
           <Route path="/register" exact component={Register} />
           <Route path="/" exact component={Slider} />
           <Route path="/menu" exact component={Pedidomenu} />
+          <Route path="/subheader" exact component={Subheader} />
           <Route path="/sushi" exact component={Sushimenu} />
           <Route path="/entrantes" exact component={Entrantesmenu} />
           <Route path="/antisushi" exact component={Antisushimenu} />
