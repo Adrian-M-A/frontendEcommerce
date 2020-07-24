@@ -1,13 +1,14 @@
 import React from "react";
 import "./Product-Item.css";
-import {addProductToCart} from "../../services/redux/actions.js";
+import {addProductToCart, addProductToDetail} from "../../services/redux/actions.js";
 import carro from "../../img/logocarro150.png";
 import {useHistory} from "react-router-dom";
 
 const ProductItem = ({product}) => {
     const history = useHistory();
-    const goToProductDetail = (event) => {
-        history.push("/detail");
+    const goToProductDetail = () => {
+        history.push("/detail/" + product.id);
+        addProductToDetail(product.id);
     }
     return <div className="product">
                 <div id="up">

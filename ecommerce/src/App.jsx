@@ -35,7 +35,7 @@ function App() {
           <Route path="/products" exact component={Product} />
           <Route path="/vegetarian" exact component={Vegan} />
           <Route path="/glutenFree" exact component={GlutenFree} />
-          <Route path="/detail" exact component={ProductDetail} />
+          <Route path="/detail/:id" exact component={ProductDetail} />
           <Route path="/" exact component={Slider} />
           <Route path="/menu" exact component={Subheader} />
           <Route path="/sushi" exact component={Sushimenu} />

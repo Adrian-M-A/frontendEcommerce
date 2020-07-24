@@ -5,7 +5,8 @@ import {
     GET_ALL_PRODUCTS,
     ADD_PRODUCT_TO_CART,
     GET_GLUTEN_FREE_PRODUCTS,
-    GET_VEGETARIAN_PRODUCTS
+    GET_VEGETARIAN_PRODUCTS,
+    GET_SELECTED_PRODUCT
 } from "./types/products.js";
 
 export const login = async(credentials) =>{
@@ -37,7 +38,6 @@ export const glutenFreeProducts = async() =>{
 
 export const VeganProducts = async() =>{
     const res = await axios.get(backURL + "products/vegetarian");
-    console.log(res)
     store.dispatch({
         type: GET_VEGETARIAN_PRODUCTS,
         payload: res.data
@@ -49,5 +49,13 @@ export const addProductToCart = (product) =>{
     store.dispatch({
         type:ADD_PRODUCT_TO_CART,
         payload: [...cart, product]
+    })
+}
+
+export const addProductToDetail = async(id) =>{
+    const res = await axios.get(backURL + "products/selected/" + id);
+    store.dispatch({
+        type: GET_SELECTED_PRODUCT,
+        payload: res.data
     })
 }

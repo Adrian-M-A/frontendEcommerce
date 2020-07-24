@@ -1,11 +1,12 @@
-import { GET_ALL_PRODUCTS, ADD_PRODUCT_TO_CART, GET_GLUTEN_FREE_PRODUCTS, GET_VEGETARIAN_PRODUCTS } from "./types/products.js";
+import { GET_ALL_PRODUCTS, ADD_PRODUCT_TO_CART, GET_GLUTEN_FREE_PRODUCTS, GET_VEGETARIAN_PRODUCTS, GET_SELECTED_PRODUCT } from "./types/products.js";
 
 const initialState = {
     user: {},
     products: [],
     glutenFree: [],
     vegetarian: [],
-    cart:[]
+    cart:[],
+    productDetail:{}
 }
 
 function reducer(state = initialState, action){
@@ -39,6 +40,11 @@ function reducer(state = initialState, action){
             return{
                 ...state,
                 cart:action.payload
+            }
+        case GET_SELECTED_PRODUCT:
+            return{
+                ...state,
+                productDetail:action.payload
             }
         default:
             return state

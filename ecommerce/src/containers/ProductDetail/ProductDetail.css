@@ -1,8 +1,6 @@
 #productDetailBody{
     display: flex;
     flex-direction: row;
-    height: 2rem;
-    background-color: red;
 }
 
 #filters{
