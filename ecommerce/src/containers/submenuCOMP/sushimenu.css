@@ -1,6 +1,12 @@
 #sushicontainer {
     display: flex;
+    justify-content: flex-start;
     background-color: #e2ddfa;
     width: 100vw;
     height: 80vh;
 }
+
+.textoprueba{
+    display:flex;
+    margin-left: -25em;
+  }

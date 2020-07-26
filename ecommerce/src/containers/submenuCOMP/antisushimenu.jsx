@@ -9,6 +9,7 @@ class antisushimenu extends React.Component {
         return (
             <div id="antisushicontainer">
                 <Subheader />
+                <p className="textoprueba">Soy el anti sushi component y debería traer los productos</p>
 
             </div>
 

@@ -9,6 +9,8 @@ class entrantesmenu extends React.Component {
         return(
             <div id="entrantescontainer">
                 <Subheader />
+                <p className="textoprueba">Soy el entrante component y debería traer los productos</p>
+
             </div>
 
         );

@@ -12,6 +12,8 @@ class sushimenu extends React.Component {
         return(
             <div id="sushicontainer">
                 <Subheader />
+                <p className="textoprueba">Soy el sushi component y debería traer los productos</p>
+
             </div>
 
         );

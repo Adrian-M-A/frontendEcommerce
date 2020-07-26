@@ -10,6 +10,7 @@ class bebidasmenu extends React.Component {
         return(
             <div id="bebidascontainer">
                 <Subheader />
+                <p className="textoprueba">Soy el bebida component y debería traer los productos</p>
 
 
 

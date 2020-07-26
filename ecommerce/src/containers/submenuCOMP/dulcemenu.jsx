@@ -10,6 +10,8 @@ class dulcemenu extends React.Component {
         return(
             <div id="dulcescontainer">
                 <Subheader />
+                <p className="textoprueba">Soy el dulce component y debería traer los productos</p>
+
             </div>
 
         );
