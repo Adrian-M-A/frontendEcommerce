@@ -1,0 +1,19 @@
+#productsBody{
+    display: flex;
+    flex-direction: row;
+}
+
+#filters{
+    display: flex;
+    flex-direction: column;
+    height: 50rem;
+    width: 15%;
+}
+
+.products{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 85%;
+    height: 85rem;
+}

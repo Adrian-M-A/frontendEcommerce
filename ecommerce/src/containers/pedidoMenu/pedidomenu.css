@@ -1,0 +1,15 @@
+#pedidomenucontainer {
+    display: flex;
+    background-color: #e2ddfa;
+    width: 100vw;
+    height: 80vh;
+}
+
+.product-item{
+    width: 100%;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    text-align: left;
+}
+

@@ -1,0 +1,23 @@
+#errorContainer {
+        display: flex;
+        background-image: url("../../img/error404.png") ;
+        background-size: contain;
+        width: 100vw;
+        height: 100vh;
+        background-repeat: no-repeat;
+
+    }
+
+    #errorbutton {
+        display: flex;
+        position: absolute;
+        margin-top: 4.2em;
+        margin-left: 46.8em;
+        background-color: #e2ddfa;
+        color: #917aa4;
+           
+    }
+
+    #errorbutton:hover {
+        background-color: #f3ebc6 ;
+    }

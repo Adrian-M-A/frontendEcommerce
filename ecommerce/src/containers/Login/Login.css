@@ -1,0 +1,110 @@
+#loginContainer{
+    background-image: url("../../img/Back3.jpg");
+    background-color: #e2ddfa;
+    display:    flex;
+    justify-content: center;
+    margin-top: -7rem;
+    height: 55rem;
+}
+
+#loginWindow {
+    background-color: white;
+    display: flex;
+    justify-items: center;
+    align-self: center;
+    flex-direction: column;
+    box-shadow: 0.2rem 0.2rem 1rem black ;
+    border-radius: 1rem;
+    width: 35rem;
+    height: 35rem;
+}
+
+#windowContent{
+    display: flex;
+    flex-direction: column;
+}
+
+#loginwindowHeader{
+    display: flex;
+    justify-content: center;
+    height: 8rem;
+    width: 35rem;
+    border-radius: 1rem 1rem 0rem 0rem;
+    background-color: #96c9cd;
+}
+
+#loginLogoImage{
+    display: flex;
+    align-self: center;
+    background-image: url("../../img/sushiya.png");   
+    height: 10rem; 
+    width: 20rem;
+}
+
+#loginH2{
+    color: #917aa4;
+    padding: 1rem;
+}
+
+#loginForm {
+    display: flex;
+    flex-direction: column;    
+    width: 20rem;
+}
+
+#loginFormInputs{
+    display: flex;
+    justify-content: center;
+}
+
+#loginEmailInput, #loginPasswordInput{
+    margin-left: 10rem;
+    margin: 1rem;
+    padding: 0.5rem;
+    border: 0.1rem solid #96c9cd;
+    border-top: 0rem;
+    border-left: 0rem;
+    border-right: 0rem;
+    font-size: medium;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+::placeholder{
+    font-weight: bolder;
+}
+
+#errorLogin{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:red;
+}
+
+#loginButton{
+    background-color: #917aa4;
+    border: 0.2rem solid #917aa4;
+    border-radius: 0.5rem;
+    height: 3rem;
+    padding: 0.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: large;
+    color: #f3ebc6;
+    margin-top: 2rem;
+    margin-bottom: 0rem;
+}
+
+#loginButton:hover{
+    background-color: #9c83b1;
+    border: 0.2rem solid #9c83b1;
+    color: white;
+}
+
+#registerButton{
+    border: 0.2rem solid #96c9cd;
+    background-color: #96c9cd;
+    color: #917aa4;
+    margin-top: 1.5rem;
+}
+
+#registerButton:hover{
+    color: white;
+}

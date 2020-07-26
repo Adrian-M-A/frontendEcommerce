@@ -1,0 +1,65 @@
+#header{
+    display: flex;
+    background-color: #96c9cd;
+    width: 100vw;
+    height: 4.5em;
+    margin-top: 1.5em;
+    opacity: 70%;
+}
+
+
+#menu {
+
+}
+
+#logoheader {
+display: flex;
+background-image: url("../../img/sushiya.png");
+width: 300px;
+height: 100px;
+margin-top: -2.8em;
+
+}
+
+#orderbutton {
+    display: flex;
+    position: absolute;
+    margin-top: -2.2em;
+    margin-left: 55em;
+    font-family: Audrey, monospace;
+    font-size: 20px;
+    color: #917aa4;
+    font-weight: bold;
+    background-color: #96c9cd;
+    border: none;
+}
+
+#orderbutton:hover {
+    color: #f3ebc6;
+}
+
+#cartbutton {
+    display: flex;
+    position: absolute;
+    margin-top: -2.2em;
+    margin-left: 60em;
+    font-family: Audrey, monospace;
+    font-size: 20px;
+    color: #917aa4;
+    font-weight: bold;
+    background-color: #96c9cd;
+    border: none;
+}
+
+#cartbutton:hover {
+    color: #f3ebc6;
+}
+
+#logocart {
+    display: flex;
+    background-image: url("../../img/logocarro150.png");
+    width: 100px;
+    height: 90px;
+    margin-top: -4em;
+    margin-left: 79em;
+}

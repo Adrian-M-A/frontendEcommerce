@@ -1,0 +1,26 @@
+.productCheckout{
+    display: flex;
+    justify-content: center;
+    height: 10rem;
+    width: 40rem;
+    margin-left: 2rem;
+    margin-top: 1rem;
+}
+
+#leftCheckout{
+    display: flex;
+    justify-content: center;
+    height: 5rem;
+}
+
+#productImage{
+    height: 7rem;
+    cursor: pointer;
+}
+
+#rightCheckout{
+    display: flex;
+    justify-content: center;
+    height: 3rem;
+    width: 40rem;
+}

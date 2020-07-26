@@ -1,0 +1,25 @@
+#productsBody{
+    display: flex;
+    flex-direction: row;
+}
+
+#filters{
+    display: flex;
+    flex-direction: column;
+    height: 50rem;
+    width: 15%;
+}
+
+.productsCheckout{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 85%;
+    height: 85rem;
+}
+
+#orderTitle{
+    display: flex;
+    margin-left: 3rem;
+}

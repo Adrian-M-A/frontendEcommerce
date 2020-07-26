@@ -1,0 +1,12 @@
+#containerslider {
+    display: flex;
+    background-image: url("../../img/slider1.png") ;
+    width: 100vw;
+    height: 100vh;
+    margin-top: -7.5em;
+
+}
+
+.slider {
+    display: flex;
+}
