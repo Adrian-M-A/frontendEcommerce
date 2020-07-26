@@ -9,11 +9,11 @@ class subheader extends React.Component {
         return (
             <div id="subheader">
                 <nav id="submenu">
-                    <NavLink to="sushi" class="menubuttons" id="sushibutton-submenu">Sushi</NavLink>
-                    <NavLink to="entrantes" class="menubuttons" id="entrantesbutton-submenu">Entrantes</NavLink>
-                    <NavLink to="antisushi" class="menubuttons" id="antisushibutton-submenu">Anti Sushi</NavLink>
-                    <NavLink to="dulces" class="menubuttons" id="dulcebutton-submenu">Dulces</NavLink>
-                    <NavLink to="bebidas" class="menubuttons" id="bebidabutton-submenu">Bebidas</NavLink>
+                    <NavLink to="sushi" class="menubuttons" id="sushibutton-submenu" activeClassName="active">Sushi</NavLink>
+                    <NavLink to="entrantes" class="menubuttons" id="entrantesbutton-submenu" activeClassName="active">Entrantes</NavLink>
+                    <NavLink to="antisushi" class="menubuttons" id="antisushibutton-submenu"activeClassName="active">Anti Sushi</NavLink>
+                    <NavLink to="dulces" class="menubuttons" id="dulcebutton-submenu"activeClassName="active">Dulces</NavLink>
+                    <NavLink to="bebidas" class="menubuttons" id="bebidabutton-submenu"activeClassName="active">Bebidas</NavLink>
                 </nav>
 
 

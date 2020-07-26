@@ -6,6 +6,12 @@
     opacity: 70%;
 }
 
+.menubuttons{
+    font-family: Audrey, monospace;
+    font-size: 20px;
+    color: #f3ebc6;
+    font-weight: bold;
+}
 
 #sushibutton-submenu {
     display: flex;
@@ -47,4 +53,8 @@
 .menubuttons:hover{
     background-color: none;
     color: #e2ddfa;
+}
+
+.active {
+    border-bottom: 2px solid #96c9cd;
 }
