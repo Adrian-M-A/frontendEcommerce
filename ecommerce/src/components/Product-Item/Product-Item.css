@@ -1,0 +1,31 @@
+.product{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 10rem;
+    width: 10rem;
+    padding: 1rem;
+}
+
+#up{
+    display: flex;
+    justify-content: center;
+    height: 5rem;
+    margin-bottom: 1rem;
+}
+
+#productImage{
+    height: 7rem;
+    cursor: pointer;
+}
+
+#down{
+    display: flex;
+    justify-content: center;
+    height: 3rem;
+    margin-top: 2rem;
+}
+#cart{
+    height: 3rem;
+    cursor: pointer;
+}

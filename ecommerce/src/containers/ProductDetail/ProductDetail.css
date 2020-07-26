@@ -1,0 +1,32 @@
+#productDetailBody{
+    display: flex;
+    flex-direction: row;
+}
+
+#filters{
+    display: flex;
+    flex-direction: column;
+    height: 50rem;
+    width: 15%;
+}
+
+.productDetail{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 85%;
+    height: 85rem;
+}
+
+#imageProductDetail{
+    width: 40rem;
+    justify-content: center;
+    margin-top: -20rem;
+    margin-left: 30rem;
+}
+
+#cartDetail{
+    margin-left: 48rem;
+    width: 5rem;
+    cursor: pointer;
+}

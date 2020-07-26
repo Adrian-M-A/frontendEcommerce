@@ -1,7 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
-import Login from "./containers/login/login.jsx";
-import Register from "./containers/register/register.jsx"; 
+import Login from "./containers/Login/Login.jsx";
+import Register from "./containers/Register/Register.jsx";
+import Product from "./containers/Products/Product.jsx";
+import GlutenFree from "./containers/GlutenFree/GlutenFree.jsx";
+import Vegan from "./containers/Vegan/Vegan.jsx";
+import ProductDetail from "./containers/ProductDetail/ProductDetail.jsx";
+import Checkout from "./containers/Checkout/Checkout.jsx";
 
 import './App.css';
 
@@ -17,12 +22,7 @@ import Dulcemenu from "./containers/submenuCOMP/dulcemenu.jsx";
 import Bebidasmenu from "./containers/submenuCOMP/bebidasmenu.jsx";
 import Pedidomenu from "./containers/pedidoMenu/pedidomenu.jsx";
 
-
-
-
-
 //Usamos "className" porque solo "class" da lugar a confusión en jsx
-
 
 function App() {
   return (
@@ -31,10 +31,14 @@ function App() {
       <Router>
 
       <HeaderFija />
-
         <Switch>
           <Route path="/login" exact component={Login} />
           <Route path="/register" exact component={Register} />
+          <Route path="/products" exact component={Product} />
+          <Route path="/vegetarian" exact component={Vegan} />
+          <Route path="/glutenFree" exact component={GlutenFree} />
+          <Route path="/detail/:id" exact component={ProductDetail} />
+          <Route path="/checkout" exact component={Checkout} />          
           <Route path="/" exact component={Slider} />
           <Route path="/menu" exact component={Pedidomenu} />
           <Route path="/subheader" exact component={Subheader} />

@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import "./register.css";
+import "./Register.css";
 
 class Register extends React.Component {
     constructor(props){
@@ -105,18 +105,12 @@ class Register extends React.Component {
             this.setState({errorRegister: "No ha sido posible registrarlo."});
         })
     };
-
-    // this.props.history.block((location, action) => {
-    //     if (input.value !== '') {
-    //         return '¿Seguro que quiere abandonar la página sin completar el formulario?';
-    //     }
-    // });
-
-    register = () =>{
-        setTimeout(() => {
-            this.props.history.push('/register');
-        }, 300);
-    };
+    
+    // register = () =>{
+    //     setTimeout(() => {
+    //         this.props.history.push('/register');
+    //     }, 300);
+    // };
 
     render() {
         return(
