@@ -10,10 +10,23 @@
     width: 15%;
 }
 
-.products{
+.productDetail{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    flex-direction: column;
+    justify-content: center;
     width: 85%;
     height: 85rem;
+}
+
+#imageProductDetail{
+    width: 40rem;
+    justify-content: center;
+    margin-top: -20rem;
+    margin-left: 30rem;
+}
+
+#cartDetail{
+    margin-left: 48rem;
+    width: 5rem;
+    cursor: pointer;
 }

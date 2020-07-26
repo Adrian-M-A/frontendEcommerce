@@ -16,12 +16,17 @@ class GlutenFree extends React.Component{
     vegetarian = () => {
         this.props.history.push("/vegetarian");
     }
+
+    allProducts = () => {
+        this.props.history.push("/products");
+    }
     render(){
         return(
             <div id="productsBody">
                 <div id="filters">
                     <button id="glutenFree" onClick={this.glutenFree}>Sin gluten</button>
                     <button id="vegetarian" onClick={this.vegetarian}>Veggie</button>
+                    <button id="allProducts" onClick={this.allproducts}>Veggie</button>
                 </div>
                 <div className="products">
                     {this.props.glutenFree?.map(glutenFree =><GlutenProduct
