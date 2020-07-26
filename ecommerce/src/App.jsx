@@ -3,9 +3,10 @@ import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import Login from "./containers/Login/Login.jsx";
 import Register from "./containers/Register/Register.jsx";
 import Product from "./containers/Products/Product.jsx";
-import GlutenFree from "./containers/glutenFree/glutenFree.jsx";
+import GlutenFree from "./containers/GlutenFree/GlutenFree.jsx";
 import Vegan from "./containers/Vegan/Vegan.jsx";
 import ProductDetail from "./containers/ProductDetail/ProductDetail.jsx";
+import Checkout from "./containers/Checkout/Checkout.jsx";
 
 import './App.css';
 
@@ -36,6 +37,7 @@ function App() {
           <Route path="/vegetarian" exact component={Vegan} />
           <Route path="/glutenFree" exact component={GlutenFree} />
           <Route path="/detail/:id" exact component={ProductDetail} />
+          <Route path="/checkout" exact component={Checkout} />          
           <Route path="/" exact component={Slider} />
           <Route path="/menu" exact component={Subheader} />
           <Route path="/sushi" exact component={Sushimenu} />

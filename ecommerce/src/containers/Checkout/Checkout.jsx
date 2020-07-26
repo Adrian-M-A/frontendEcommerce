@@ -1,12 +1,11 @@
 import React from "react";
 import {connect} from "react-redux";
-import "./glutenFree.css";
-import GlutenProduct from "../../components/Gluten-Product/Gluten-Product.jsx";
-import { glutenFreeProducts } from "../../services/redux/actions.js";
+import "./Checkout.css";
+import ProductCheckout from "../../components/Product-Checkout/Product-Checkout";
 
-class GlutenFree extends React.Component{
+class Checkout extends React.Component{
     componentDidMount(){
-        glutenFreeProducts()
+        
     }
 
     glutenFree = () => {
@@ -20,21 +19,23 @@ class GlutenFree extends React.Component{
     allProducts = () => {
         this.props.history.push("/products");
     }
+
     render(){
         return(
             <div id="productsBody">
                 <div id="filters">
                     <button id="glutenFree" onClick={this.glutenFree}>Sin gluten</button>
                     <button id="vegetarian" onClick={this.vegetarian}>Veggie</button>
-                    <button id="allProducts" onClick={this.allproducts}>Veggie</button>
+                    <button id="allProducts" onClick={this.allProducts}>Todos los productos</button>
                 </div>
-                <div className="products">
-                    {this.props.glutenFree?.map(glutenFree =><GlutenProduct
-                    key={glutenFree.id} glutenFree={glutenFree} />)}
+                <div className="productsCheckout">
+                    <h3 id="orderTitle">Has pedido: </h3>
+                    {this.props.cart?.map(product =><ProductCheckout
+                    key={product.id} product={product} />)}
                 </div>
             </div>  
         )
     }
 }
-const mapStateToProps = ({glutenFree}) => ({glutenFree:glutenFree});
-export default connect(mapStateToProps)(GlutenFree);
+const mapStateToProps = ({cart}) => ({cart:cart});
+export default connect(mapStateToProps)(Checkout);

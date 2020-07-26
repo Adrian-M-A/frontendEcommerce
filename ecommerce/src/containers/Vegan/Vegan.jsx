@@ -1,8 +1,8 @@
 import React from "react";
 import {connect} from "react-redux";
 import "./Vegan.css";
-import VeganProduct from "../../components/Vegan-Product/Vegan-Product.jsx";
 import { VeganProducts } from "../../services/redux/actions.js";
+import ProductItem from "../../components/Product-Item/Product-Item";
 
 class Vegan extends React.Component{
     componentDidMount(){
@@ -16,16 +16,22 @@ class Vegan extends React.Component{
     vegetarian = () => {
         this.props.history.push("/vegetarian");
     }
+
+    allProducts = () => {
+        this.props.history.push("/products");
+    }
+
     render(){
         return(
             <div id="productsBody">
                 <div id="filters">
                     <button id="glutenFree" onClick={this.glutenFree}>Sin gluten</button>
                     <button id="vegetarian" onClick={this.vegetarian}>Veggie</button>
+                    <button id="allProducts" onClick={this.allProducts}>Todos los productos</button>
                 </div>
                 <div className="products">
-                    {this.props.vegetarian?.map(vegetarian =><VeganProduct
-                    key={vegetarian.id} vegetarian={vegetarian} />)}
+                    {this.props.vegetarian?.map(product =><ProductItem
+                    key={product.id} product={product} />)}
                 </div>
             </div>  
         )

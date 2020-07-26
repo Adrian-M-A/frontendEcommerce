@@ -1,28 +1,26 @@
-.product{
+.productCheckout{
     display: flex;
     justify-content: center;
-    flex-direction: column;
     height: 10rem;
-    width: 10rem;
-    padding: 2rem;
+    width: 40rem;
+    margin-left: 2rem;
+    margin-top: 1rem;
 }
 
-#up{
+#leftCheckout{
     display: flex;
     justify-content: center;
     height: 5rem;
-    margin-bottom: 1rem;
 }
 
 #productImage{
     height: 7rem;
+    cursor: pointer;
 }
 
-#down{
+#rightCheckout{
     display: flex;
     justify-content: center;
     height: 3rem;
-}
-#cart{
-    height: 3rem
+    width: 40rem;
 }

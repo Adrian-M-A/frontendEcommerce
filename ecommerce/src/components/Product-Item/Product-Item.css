@@ -23,6 +23,7 @@
     display: flex;
     justify-content: center;
     height: 3rem;
+    margin-top: 2rem;
 }
 #cart{
     height: 3rem;
