@@ -14,7 +14,7 @@ class headerFija extends React.Component {
                 <nav id="menu">
                     <div id="logoheader"></div>
                     <NavLink to="/menu" className="menubuttons" id="orderbutton">Pedido</NavLink>
-                    <button className="menubuttons" id="cartbutton">Cesta</button>
+                    <NavLink to="/checkout" className="menubuttons" id="cartbutton">Cesta</NavLink>
                     <div id="logocart"></div>
                 </nav>
                 

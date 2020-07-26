@@ -3,6 +3,7 @@ import axios from "axios";
 import "./pedidomenu.css";
 // import { NavLink } from "react-router-dom";
 import Subheader from "../Subheader/subheader.jsx";
+import Product from '../Products/Product.jsx';
 
 
 class pedidomenu extends React.Component {
@@ -42,6 +43,7 @@ class pedidomenu extends React.Component {
         return (
             <div id="container-pedido">
                 <Subheader />
+                <Product />
                 <div id="products"> {this.getProducts} </div>
             </div>
         );
