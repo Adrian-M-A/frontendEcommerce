@@ -1,8 +1,8 @@
-.productCheckout{
+#productCheckout{
     display: flex;
     justify-content: center;
     height: 10rem;
-    width: 40rem;
+    width: 50rem;
     margin-left: 2rem;
     margin-top: 1rem;
 }
@@ -10,7 +10,7 @@
 #leftCheckout{
     display: flex;
     justify-content: center;
-    height: 5rem;
+    width: 5rem;
 }
 
 #productImage{
@@ -20,7 +20,15 @@
 
 #rightCheckout{
     display: flex;
-    justify-content: center;
-    height: 3rem;
+    height: 10rem;
     width: 40rem;
 }
+
+#checkoutName, #checkoutPrice{
+    width: 20%;
+}
+
+#checkoutDescription{
+    width: 60%;
+}
+
