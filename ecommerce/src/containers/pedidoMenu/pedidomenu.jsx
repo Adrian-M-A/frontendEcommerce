@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 import "./pedidomenu.css";
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 import Subheader from "../Subheader/subheader.jsx";
 import Product from '../Products/Product.jsx';
 
@@ -30,26 +30,15 @@ class pedidomenu extends React.Component {
 
     render() {
 
-<<<<<<< HEAD
-        // // var listProducts = this.state.products.map((product) => {
-
-        //     return (
-        //     <h1>{}</h1> // <h1>{product.name}</h1>
-=======
         // var listProducts = this.state.products.map((product) => {
 
         //     return (
         //         <h1>{product.name}</h1>
->>>>>>> develop
         //     );
 
 
 
-<<<<<<< HEAD
-        // // });
-=======
         // });
->>>>>>> develop
 
         return (
             <div id="container-pedido">

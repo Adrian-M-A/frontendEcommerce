@@ -1,6 +1,6 @@
 import React from "react";
 import "./slider.css";
-import { Carousel } from "react-responsive-carousel";
+// import { Carousel } from "react-responsive-carousel";
 
 class slider extends React.Component {
     render() {
