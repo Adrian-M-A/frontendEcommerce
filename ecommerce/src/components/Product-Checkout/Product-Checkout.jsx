@@ -4,7 +4,7 @@ import "./Product-Checkout.css";
 
 const ProductCheckout = ({product}) => {
     
-    return <div id="productCheckout">
+    return <div className="productCheckout">
                 <div id="leftCheckout">
                     <img id="productImage" src={product.ImagePath} alt={product.name + ' imagen'}  />
                 </div>
